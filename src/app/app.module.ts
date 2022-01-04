@@ -12,6 +12,8 @@ import { PhoneSearchComponent } from './components/phone-search/phone-search.com
 import { appStoreProviders } from './app.store';
 import { HttpClientModule } from '@angular/common/http';
 import { PhoneService } from './services/phone.service';
+import { NgPhoneForDemoComponent } from './components/ng-phone-for/ng-phone-for.component';
+import { NgPhoneForDirectiveDirective } from './directives/ng-phone-for-directive.directive';
 
 @NgModule({
   declarations: [
@@ -20,15 +22,12 @@ import { PhoneService } from './services/phone.service';
     PhonesComponent,
     PhoneFormComponent,
     FilterPipePipe,
-    PhoneSearchComponent
+    PhoneSearchComponent,
+    NgPhoneForDemoComponent,
+    NgPhoneForDirectiveDirective,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [appStoreProviders, PhoneService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
